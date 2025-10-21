@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Party Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="header">
+        <h1>PARTY FINDER</h1>
+      </header>
+
+      <!-- post listing -->
+      <section class="board">
+        <div class="board_header">
+          <h2>Active Posts</h2>
+        </div>
+        <ul id="posts" class="posts" aria-live="polite"></ul>
+        <p id="empty-state" class="empty">No parties yet. Start the first quest!</p>
+      </section>
+
+      <!-- post submission form -->
+      <section id="form-panel" class="form-panel">
+        <h2>Create a Post</h2>
+        <p id="form-status" class="status" role="status" aria-live="polite"></p>
+        <form id="lfg-form" autocomplete="off">
+          <label>
+            Game Title
+            <input type="text" name="gameName" placeholder="Overwatch" />
+          </label>
+          <label>
+            Group Size
+            <input type="text" name="groupSize" placeholder="1/5" />
+          </label>
+          <label>
+            Description
+            <textarea
+              name="description"
+              rows="4"
+              placeholder="Chill healer looking for a team in competitive."
+            ></textarea>
+          </label>
+          <button type="submit" class="glow-button">Broadcast</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
